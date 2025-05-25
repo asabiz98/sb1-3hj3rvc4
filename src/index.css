@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    @apply text-gray-800 bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 inline-block;
+  }
+  
+  .btn-secondary {
+    @apply bg-navy-800 hover:bg-navy-900 text-white font-semibold py-3 px-6 rounded-md transition duration-300 inline-block;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-navy-800 text-navy-800 hover:bg-navy-800 hover:text-white font-semibold py-2.5 px-6 rounded-md transition duration-300 inline-block;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4;
+  }
+  
+  .nav-link {
+    @apply text-white hover:text-orange-500 transition duration-300;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .product-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-md card-hover;
+  }
+  
+  .input-field {
+    @apply w-full rounded-md border-gray-300 bg-gray-50 px-4 py-3 text-gray-800 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-400;
+  }
+}
